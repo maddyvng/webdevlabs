@@ -42,20 +42,19 @@ findTheBanana(L2, 'second');
 function greetingFunc() {
     const d = new Date();
     let h = d.getHours();
-    if (20<h<24 || 0<h<5) {
+    if (h >= 20) {
         document.getElementById("greeting").innerHTML = "Good night, my name is Maddy Ng";
-    }
-    else if (h<12) {
+    } else if (h < 5) {
+        document.getElementById("greeting").innerHTML = "Good night, my name is Maddy Ng";
+    } else if (h < 12) {
         document.getElementById("greeting").innerHTML = "Good morning, my name is Maddy Ng";
-    }
-    else if (12<h<18) {
+    } else if (h < 18) {
         document.getElementById("greeting").innerHTML = "Good afternoon, my name is Maddy Ng";
-    }
-    else if (18<h<20) {
+    } else if (h < 20) {
         document.getElementById("greeting").innerHTML = "Good evening, my name is Maddy Ng";
     }
 }
 
-if (window.location.href.includes('index.html')){
+if (window.location.href.includes('index.html')) {
     greetingFunc();
 }
